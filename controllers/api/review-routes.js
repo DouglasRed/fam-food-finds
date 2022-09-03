@@ -10,7 +10,8 @@ router.get("/:id", async (req, res) => {
             {model: Review,
             include: [{model: User, attributes: ["username"]}]}]
       })
-      res.status(200).json(restaurantData);
+      // res.status(200).json(restaurantData);
+      res.render("review");
     } catch (err) {
       res.status(500).json(err);
     }
